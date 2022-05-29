@@ -6,6 +6,10 @@ class Paletka:
     def __init__(self, kolor):
         self.kolor_obiektu = kolor
         print(f"Utworzylismy obiekt o kolorze {self.kolor_obiektu}m. - ID: {id(self)}")
+    def info(self):
+        print(f"Kolor obiektu to: {self.kolor_obiektu}")
+    def info_ex(self, nazwa):
+        print(f"Kolor obiektu {nazwa} to: {self.kolor_obiektu}")
 # pass jest to miejsce dla funkcjonalnosci, ktora bedzie dodana pozniej
 # pass moze tez byc uzyte w ciele funkcji, ktore nic nie robi
 # przyklad:
@@ -53,3 +57,7 @@ def testklasy():
     print(dir(paletka_b))
     print(f"Kolor dla paletka_a: {paletka_a.kolor_obiektu}")
     print(f"Kolor dla paletka_b: {paletka_b.kolor_obiektu}")
+    paletka_a.info()
+    paletka_b.info()
+    paletka_a.info_ex("a")
+    paletka_b.info_ex("b")
